@@ -19,10 +19,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch
+    application.statusBarStyle = UIStatusBarStyleLightContent;
     
     JobsListViewController *mainVC = [[JobsListViewController alloc] initWithNibName:@"JobsListView" bundle:nil];
     _navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
     [_navController.navigationBar setTranslucent:FALSE];
+    [_navController.navigationBar setOpaque:TRUE];
+
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [_navController.navigationBar setTintColor:[UIColor whiteColor]];
+    [_navController.navigationBar setBarTintColor:[UIColor colorWithRed:217.0f/255.0f green:35.0f/255.0f blue:22.0f/255.0f alpha:1.0f]];
+    [_navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:_navController];

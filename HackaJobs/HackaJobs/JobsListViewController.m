@@ -8,6 +8,8 @@
 
 #import "JobsListViewController.h"
 #import "JobTableViewCell.h"
+#import "JobDetailViewController.h"
+#import "OnlineDataConnector.h"
 
 @interface JobsListViewController ()
 
@@ -22,15 +24,56 @@
     
     [self setTitle:NSLocalizedString(@"application.name", nil)];
     
+    refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(loadDataFromRefreshControl) forControlEvents:UIControlEventValueChanged];
+    [_tableView addSubview:refreshControl];
+    
     [_tableView registerClass:[JobTableViewCell class] forCellReuseIdentifier:[JobTableViewCell cellIdentifier]];
     [_tableView registerNib:[UINib nibWithNibName:@"JobTableViewCell" bundle:nil] forCellReuseIdentifier:[JobTableViewCell cellIdentifier]];
     [_tableView setRowHeight:[JobTableViewCell getRowHeight]];
+    
+    [self loadData:TRUE];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Load Data
+- (void) loadDataFromRefreshControl
+{
+    [self loadData:false];
+}
+
+- (void) loadData:(BOOL)showingActivityIndicator
+{
+    jobs = [[JobsList alloc] init];
+    
+    if (showingActivityIndicator)
+        [self showActivityIndicator];
+    
+    [[OnlineDataConnector sharedInstance] getJobsWithSuccess:^(JobsList *jobsList) {
+        
+        if (showingActivityIndicator)
+            [self hideActivityIndicator];
+        else
+            [refreshControl endRefreshing];
+        
+        jobs = jobsList;
+        
+        [_tableView reloadData];
+        
+    } failure:^(NSError *error) {
+        
+        if (showingActivityIndicator)
+            [self hideActivityIndicator];
+        else
+            [refreshControl endRefreshing];
+        
+        [self showAlert:[error localizedDescription]];
+    }];
 }
 
 #pragma mark UITableView Delegate & DataSource
@@ -41,14 +84,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [jobs.items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JobTableViewCell *jobCell = [tableView dequeueReusableCellWithIdentifier:[JobTableViewCell cellIdentifier] forIndexPath:indexPath];
     
-    [jobCell bindCellWithTitle:@"Title" description:@"Description" imageURL:nil city:@"Girona" endDate:[NSDate date]];
+    Job *current = [jobs.items objectAtIndex:[indexPath row]];
+    
+    [jobCell bindCellWithTitle:current.title description:current.desc imageURL:current.pictureURL city:current.city endDate:current.endDate];
     
     [jobCell setSelectionStyle:UITableViewCellSelectionStyleGray];
     [jobCell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -59,7 +104,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:TRUE];
-}
+    
+    Job *selectedJob = [jobs.items objectAtIndex:[indexPath row]];
+    
+    JobDetailViewController *jobDetailVC = [[JobDetailViewController alloc] initWithNibName:@"JobDetailView" bundle:nil];
+    
+    [jobDetailVC setSelectedJob:selectedJob];
 
+    [self.navigationController pushViewController:jobDetailVC animated:TRUE];
+}
 
 @end

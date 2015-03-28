@@ -28,12 +28,26 @@ static id sharedInstance;
     if (!_shortDateNoTimeDateFormatter)
     {
         _shortDateNoTimeDateFormatter = [[NSDateFormatter alloc] init];
-        [_shortDateNoTimeDateFormatter setDateStyle:NSDateFormatterShortStyle];
+        [_shortDateNoTimeDateFormatter setDateStyle:NSDateFormatterMediumStyle];
         [_shortDateNoTimeDateFormatter setTimeStyle:NSDateFormatterNoStyle];
         [_shortDateNoTimeDateFormatter setCalendar:[NSCalendar currentCalendar]];
+        [_shortDateNoTimeDateFormatter setLocale:[NSLocale currentLocale]];
     }
     
     return _shortDateNoTimeDateFormatter;
+}
+
+- (NSDateFormatter*) apiDateFormatter
+{
+    if (!_apiDateFormatter)
+    {
+        _apiDateFormatter = [[NSDateFormatter alloc] init];
+        [_apiDateFormatter setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
+        [_apiDateFormatter setCalendar:[NSCalendar currentCalendar]];
+        [_apiDateFormatter setLocale:[NSLocale currentLocale]];
+    }
+    
+    return _apiDateFormatter;
 }
 
 @end
