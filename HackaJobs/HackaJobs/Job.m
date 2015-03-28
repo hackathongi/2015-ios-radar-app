@@ -98,7 +98,7 @@
 
 - (NSString*) applyURLString
 {
-    return [NSString stringWithFormat:@"%@%@%i", INFO_URL, JOB_PAGE_URL, self.ident];
+    return [NSString stringWithFormat:@"%@/%i", JOB_PAGE_URL, self.ident];
 }
 
 @end
