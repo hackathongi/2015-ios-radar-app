@@ -7,7 +7,6 @@
 //
 
 #import "JobTableViewCell.h"
-
 @implementation JobTableViewCell
 
 - (void)awakeFromNib {
@@ -15,6 +14,7 @@
     
     [_jobImage.layer setCornerRadius:40.0f];
     [_jobImage.layer setMasksToBounds:NO];
+    [_jobImage setClipsToBounds:TRUE];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -30,6 +30,7 @@
     [_descriptionLabel setText:description];
     [_cityLabel setText:city];
     [_endDateLabel setText:[[[FormatterManager sharedInstance] shortDateNoTimeDateFormatter] stringFromDate:endDate]];
+    [_jobImage setImageWithURL:imageURL];
 }
 
 + (CGFloat) getRowHeight

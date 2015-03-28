@@ -6,9 +6,14 @@
 //  Copyright (c) 2015 Hackathon Girona. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SuperViewController.h"
+#import "JobsList.h"
 
-@interface JobsListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface JobsListViewController : SuperViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    JobsList *jobs;
+    UIRefreshControl *refreshControl;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

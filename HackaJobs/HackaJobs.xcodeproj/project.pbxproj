@@ -16,10 +16,18 @@
 		437A8FCE1AC6A3B3001D170D /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437A8FCC1AC6A3B3001D170D /* JobTableViewCell.xib */; };
 		437A8FD21AC6A82F001D170D /* FormatterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 437A8FD11AC6A82F001D170D /* FormatterManager.m */; };
 		437A8FD61AC6AE6C001D170D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 437A8FD81AC6AE6C001D170D /* Localizable.strings */; };
+		438B11BF1AC6BBF700EC2D1E /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11BE1AC6BBF700EC2D1E /* SuperViewController.m */; };
+		438B11C21AC6BCD500EC2D1E /* OnlineDataConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11C11AC6BCD500EC2D1E /* OnlineDataConnector.m */; };
+		438B11C51AC6BED700EC2D1E /* Job.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11C41AC6BED700EC2D1E /* Job.m */; };
+		438B11C81AC6BF3D00EC2D1E /* JobsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11C71AC6BF3D00EC2D1E /* JobsList.m */; };
+		438B11CC1AC6C2CA00EC2D1E /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11CB1AC6C2CA00EC2D1E /* NSDictionary+Utility.m */; };
+		438B11D01AC6CF8A00EC2D1E /* JobDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11CE1AC6CF8A00EC2D1E /* JobDetailViewController.m */; };
+		438B11D11AC6CF8A00EC2D1E /* JobDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438B11CF1AC6CF8A00EC2D1E /* JobDetailView.xib */; };
+		5BDE6D31198917CB598AFA39 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEFEE63834A44D6C15C258A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		437A8F941AC68FBD001D170D /* HackaJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = HackaJobs.app; path = WallyJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		437A8F941AC68FBD001D170D /* WallyJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallyJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437A8F981AC68FBD001D170D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437A8F991AC68FBD001D170D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		437A8F9B1AC68FBD001D170D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +45,23 @@
 		437A8FD71AC6AE6C001D170D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		437A8FD91AC6AF28001D170D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		437A8FDA1AC6AF67001D170D /* ca-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ca-ES"; path = "ca-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		437A8FDC1AC6BA38001D170D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		438B11BD1AC6BBF700EC2D1E /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
+		438B11BE1AC6BBF700EC2D1E /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
+		438B11C01AC6BCD500EC2D1E /* OnlineDataConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineDataConnector.h; sourceTree = "<group>"; };
+		438B11C11AC6BCD500EC2D1E /* OnlineDataConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineDataConnector.m; sourceTree = "<group>"; };
+		438B11C31AC6BED700EC2D1E /* Job.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Job.h; sourceTree = "<group>"; };
+		438B11C41AC6BED700EC2D1E /* Job.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Job.m; sourceTree = "<group>"; };
+		438B11C61AC6BF3D00EC2D1E /* JobsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsList.h; sourceTree = "<group>"; };
+		438B11C71AC6BF3D00EC2D1E /* JobsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsList.m; sourceTree = "<group>"; };
+		438B11CA1AC6C2CA00EC2D1E /* NSDictionary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utility.h"; sourceTree = "<group>"; };
+		438B11CB1AC6C2CA00EC2D1E /* NSDictionary+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utility.m"; sourceTree = "<group>"; };
+		438B11CD1AC6CF8A00EC2D1E /* JobDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobDetailViewController.h; sourceTree = "<group>"; };
+		438B11CE1AC6CF8A00EC2D1E /* JobDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobDetailViewController.m; sourceTree = "<group>"; };
+		438B11CF1AC6CF8A00EC2D1E /* JobDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobDetailView.xib; sourceTree = "<group>"; };
+		43C31B33C9B207988EA94A73 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9DEFEE63834A44D6C15C258A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02286EC98BE144E14F84799 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDE6D31198917CB598AFA39 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,13 +81,15 @@
 			children = (
 				437A8F961AC68FBD001D170D /* HackaJobs */,
 				437A8F951AC68FBD001D170D /* Products */,
+				D22F2629014229332F854DD7 /* Pods */,
+				EE0B16A8CCA480EB39AB4E60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		437A8F951AC68FBD001D170D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				437A8F941AC68FBD001D170D /* HackaJobs.app */,
+				437A8F941AC68FBD001D170D /* WallyJobs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +108,7 @@
 				437A8FA41AC68FBD001D170D /* Images.xcassets */,
 				437A8F971AC68FBD001D170D /* Supporting Files */,
 				437A8FD81AC6AE6C001D170D /* Localizable.strings */,
+				437A8FDC1AC6BA38001D170D /* Constants.h */,
 			);
 			path = HackaJobs;
 			sourceTree = "<group>";
@@ -87,6 +116,10 @@
 		437A8F971AC68FBD001D170D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				438B11CA1AC6C2CA00EC2D1E /* NSDictionary+Utility.h */,
+				438B11CB1AC6C2CA00EC2D1E /* NSDictionary+Utility.m */,
+				438B11BD1AC6BBF700EC2D1E /* SuperViewController.h */,
+				438B11BE1AC6BBF700EC2D1E /* SuperViewController.m */,
 				437A8F981AC68FBD001D170D /* Info.plist */,
 				437A8F991AC68FBD001D170D /* main.m */,
 				437A8FD31AC6AB32001D170D /* PrefixHeader.pch */,
@@ -97,6 +130,8 @@
 		437A8FBD1AC6924F001D170D /* DataConnector */ = {
 			isa = PBXGroup;
 			children = (
+				438B11C01AC6BCD500EC2D1E /* OnlineDataConnector.h */,
+				438B11C11AC6BCD500EC2D1E /* OnlineDataConnector.m */,
 			);
 			name = DataConnector;
 			sourceTree = "<group>";
@@ -104,6 +139,9 @@
 		437A8FBE1AC69263001D170D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				438B11C91AC6BF5800EC2D1E /* Lists */,
+				438B11C31AC6BED700EC2D1E /* Job.h */,
+				438B11C41AC6BED700EC2D1E /* Job.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -112,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				437A8FC41AC69452001D170D /* JobsListView.xib */,
+				438B11CF1AC6CF8A00EC2D1E /* JobDetailView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -121,6 +160,8 @@
 			children = (
 				437A8FC21AC69452001D170D /* JobsListViewController.h */,
 				437A8FC31AC69452001D170D /* JobsListViewController.m */,
+				438B11CD1AC6CF8A00EC2D1E /* JobDetailViewController.h */,
+				438B11CE1AC6CF8A00EC2D1E /* JobDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -160,6 +201,32 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		438B11C91AC6BF5800EC2D1E /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				438B11C61AC6BF3D00EC2D1E /* JobsList.h */,
+				438B11C71AC6BF3D00EC2D1E /* JobsList.m */,
+			);
+			name = Lists;
+			sourceTree = "<group>";
+		};
+		D22F2629014229332F854DD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B02286EC98BE144E14F84799 /* Pods.debug.xcconfig */,
+				43C31B33C9B207988EA94A73 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE0B16A8CCA480EB39AB4E60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DEFEE63834A44D6C15C258A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 437A8FB71AC68FBD001D170D /* Build configuration list for PBXNativeTarget "WallyJobs" */;
 			buildPhases = (
+				403825D93B9727306E07CC4E /* Check Pods Manifest.lock */,
 				437A8F901AC68FBD001D170D /* Sources */,
 				437A8F911AC68FBD001D170D /* Frameworks */,
 				437A8F921AC68FBD001D170D /* Resources */,
+				7BAD146532EBFC81AC2F20BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,7 +246,7 @@
 			);
 			name = WallyJobs;
 			productName = HackaJobs;
-			productReference = 437A8F941AC68FBD001D170D /* HackaJobs.app */;
+			productReference = 437A8F941AC68FBD001D170D /* WallyJobs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -221,6 +290,7 @@
 			files = (
 				437A8FD61AC6AE6C001D170D /* Localizable.strings in Resources */,
 				437A8FA51AC68FBD001D170D /* Images.xcassets in Resources */,
+				438B11D11AC6CF8A00EC2D1E /* JobDetailView.xib in Resources */,
 				437A8FC61AC69452001D170D /* JobsListView.xib in Resources */,
 				437A8FCE1AC6A3B3001D170D /* JobTableViewCell.xib in Resources */,
 			);
@@ -228,16 +298,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		403825D93B9727306E07CC4E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BAD146532EBFC81AC2F20BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		437A8F901AC68FBD001D170D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438B11C81AC6BF3D00EC2D1E /* JobsList.m in Sources */,
 				437A8F9D1AC68FBD001D170D /* AppDelegate.m in Sources */,
 				437A8FC51AC69452001D170D /* JobsListViewController.m in Sources */,
+				438B11BF1AC6BBF700EC2D1E /* SuperViewController.m in Sources */,
+				438B11C51AC6BED700EC2D1E /* Job.m in Sources */,
 				437A8F9A1AC68FBD001D170D /* main.m in Sources */,
 				437A8FD21AC6A82F001D170D /* FormatterManager.m in Sources */,
+				438B11D01AC6CF8A00EC2D1E /* JobDetailViewController.m in Sources */,
 				437A8FCD1AC6A3B3001D170D /* JobTableViewCell.m in Sources */,
+				438B11C21AC6BCD500EC2D1E /* OnlineDataConnector.m in Sources */,
+				438B11CC1AC6C2CA00EC2D1E /* NSDictionary+Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +444,7 @@
 		};
 		437A8FB81AC68FBD001D170D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B02286EC98BE144E14F84799 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -348,6 +458,7 @@
 		};
 		437A8FB91AC68FBD001D170D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43C31B33C9B207988EA94A73 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;

@@ -11,9 +11,11 @@
 @interface FormatterManager : NSObject
 
 @property (nonatomic, strong) NSDateFormatter *shortDateNoTimeDateFormatter;
+@property (nonatomic, strong) NSDateFormatter *apiDateFormatter;
 
 + (instancetype)sharedInstance;
 
 - (NSDateFormatter*) shortDateNoTimeDateFormatter;
+- (NSDateFormatter*) apiDateFormatter;
 
 @end

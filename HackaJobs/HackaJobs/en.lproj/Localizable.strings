@@ -6,4 +6,15 @@
   Copyright (c) 2015 Hackathon Girona. All rights reserved.
 */
 
+loading = "Loading...";
+message = "Message";
+alert = "Attention!";
+
+OK = "OK";
+
+error.errorCallingWS = "An error occurred when try to connect with server";
+
 application.name = "WallyJobs";
+
+job.detail = "Detail";
+job.apply = "Apply job!";
