@@ -23,10 +23,10 @@
             <rect key="frame" x="0.0" y="64" width="320" height="416"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fa-C3-OmL">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fa-C3-OmL">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFG-7J-Daz">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFG-7J-Daz">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-X8-WDb">
@@ -96,6 +96,7 @@
                                 <constraint firstItem="ybH-Qc-QrU" firstAttribute="leading" secondItem="wFG-7J-Daz" secondAttribute="leading" constant="20" id="9n7-Rh-6dE"/>
                                 <constraint firstItem="phg-7K-4SG" firstAttribute="leading" secondItem="ybH-Qc-QrU" secondAttribute="trailing" constant="8" id="MaG-51-5UL"/>
                                 <constraint firstAttribute="trailing" secondItem="7h6-AA-f0J" secondAttribute="trailing" constant="15" id="Myj-9k-57L"/>
+                                <constraint firstAttribute="height" priority="400" constant="215" id="QC5-sD-33B"/>
                                 <constraint firstAttribute="trailing" secondItem="DrP-X8-WDb" secondAttribute="trailing" constant="15" id="Qkz-59-1lL"/>
                                 <constraint firstItem="phg-7K-4SG" firstAttribute="top" secondItem="DrP-X8-WDb" secondAttribute="bottom" constant="8" id="Re1-ue-TTE"/>
                                 <constraint firstItem="Hl9-ns-XMR" firstAttribute="top" secondItem="DrP-X8-WDb" secondAttribute="bottom" constant="8" id="Ri2-7j-jvN"/>
@@ -104,15 +105,15 @@
                                 <constraint firstItem="7h6-AA-f0J" firstAttribute="leading" secondItem="wFG-7J-Daz" secondAttribute="leading" constant="15" id="b5v-yZ-zIP"/>
                                 <constraint firstItem="qTr-Hl-tlJ" firstAttribute="top" secondItem="7h6-AA-f0J" secondAttribute="bottom" constant="20" id="dhw-cX-jAv"/>
                                 <constraint firstItem="ybH-Qc-QrU" firstAttribute="top" secondItem="wFG-7J-Daz" secondAttribute="top" constant="20" id="eJ1-uR-14a"/>
-                                <constraint firstAttribute="height" priority="400" constant="215" id="jzY-Rl-wW7"/>
                                 <constraint firstItem="DrP-X8-WDb" firstAttribute="leading" secondItem="ybH-Qc-QrU" secondAttribute="trailing" constant="8" id="rkU-ux-dmP"/>
                                 <constraint firstAttribute="trailing" secondItem="Hl9-ns-XMR" secondAttribute="trailing" constant="15" id="wcJ-Aq-MKd"/>
+                                <constraint firstAttribute="bottom" secondItem="qTr-Hl-tlJ" secondAttribute="bottom" constant="20" id="yyQ-s5-ygE"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="wFG-7J-Daz" secondAttribute="bottom" constant="201" id="PTo-0l-BA8"/>
                         <constraint firstAttribute="width" secondItem="wFG-7J-Daz" secondAttribute="width" id="SkB-b2-O3R"/>
-                        <constraint firstAttribute="bottom" secondItem="wFG-7J-Daz" secondAttribute="bottom" constant="201" id="SkP-5e-PCf"/>
                         <constraint firstItem="wFG-7J-Daz" firstAttribute="top" secondItem="7fa-C3-OmL" secondAttribute="top" id="TRf-FX-Grd"/>
                         <constraint firstAttribute="trailing" secondItem="wFG-7J-Daz" secondAttribute="trailing" id="Wji-he-ZHn"/>
                         <constraint firstItem="wFG-7J-Daz" firstAttribute="leading" secondItem="7fa-C3-OmL" secondAttribute="leading" id="jtw-UO-bMC"/>

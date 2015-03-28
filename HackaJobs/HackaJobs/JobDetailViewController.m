@@ -7,6 +7,7 @@
 //
 
 #import "JobDetailViewController.h"
+#import <SVWebViewController/SVWebViewController.h>
 
 @interface JobDetailViewController ()
 
@@ -59,19 +60,13 @@
 
 #pragma mark - Button Actions
 - (IBAction)applyJob:(id)sender
-{
-    UINavigationController *webBrowserNavigationController = [KINWebBrowserViewController navigationControllerWithWebBrowser];
-    [self presentViewController:webBrowserNavigationController animated:YES completion:nil];
+{    
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:[_selectedJob applyURLString]];
+    [webViewController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [webViewController.navigationBar setTranslucent:FALSE];
+    [webViewController setBarsTintColor:[UIColor whiteColor]];
     
-    KINWebBrowserViewController *webBrowser = [webBrowserNavigationController rootWebBrowser];
-    [webBrowser loadURL:_selectedJob.jobURL];
-    
-    [webBrowserNavigationController.navigationBar setTranslucent:FALSE];
-    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [webBrowserNavigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    [webBrowserNavigationController.navigationBar setBarTintColor:[UIColor colorWithRed:217.0f/255.0f green:35.0f/255.0f blue:22.0f/255.0f alpha:1.0f]];
-    [webBrowserNavigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-
+    [self presentViewController:webViewController animated:YES completion:NULL];
 }
 
 @end

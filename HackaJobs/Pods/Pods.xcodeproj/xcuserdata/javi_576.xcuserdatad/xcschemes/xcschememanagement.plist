@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SVWebViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TUSafariActivity-TUSafariActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,11 +57,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24FAD672AC9C03BE1C318241</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>39FCDE0E369B1AC00AAB32B9</key>
 		<dict>
 			<key>primary</key>
@@ -77,42 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68063BF984647BC80DA5B175</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>87EF6C496FE1B777F2BC4B49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8E356DFBCA476DF3D6E33828</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9040035A0C19C5180F4D337B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A1282E852C2A57C405FC6A81</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A5D8FB2439A2C8DC485C488A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A89DCFAC2B229A70D5E10BF7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DB66564586C8E8C79B9CE41B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

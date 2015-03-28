@@ -11,6 +11,7 @@
 #import "JobDetailViewController.h"
 #import "OnlineDataConnector.h"
 #import "JobsMapViewController.h"
+#import <SVWebViewController/SVWebViewController.h>
 
 @interface JobsListViewController ()
 
@@ -33,8 +34,11 @@
     [_tableView registerNib:[UINib nibWithNibName:@"JobTableViewCell" bundle:nil] forCellReuseIdentifier:[JobTableViewCell cellIdentifier]];
     [_tableView setRowHeight:[JobTableViewCell getRowHeight]];
     
-    UIBarButtonItem *buttonShowMap = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showMap)];
+    UIBarButtonItem *buttonShowMap = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"location"] style:UIBarButtonItemStylePlain target:self action:@selector(showMap)];
     [self.navigationItem setRightBarButtonItem:buttonShowMap];
+    
+    UIBarButtonItem *buttonShowInfo = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"info"] style:UIBarButtonItemStylePlain target:self action:@selector(showInfo)];
+    [self.navigationItem setLeftBarButtonItem:buttonShowInfo];
     
     [self loadData:TRUE];
 }
@@ -45,7 +49,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Show Map
+#pragma mark - Show Map & info
 - (void) showMap
 {
     JobsMapViewController *jobsMapVC = [[JobsMapViewController alloc] initWithNibName:@"JobsMapView" bundle:nil];
@@ -57,6 +61,16 @@
     navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     [self presentViewController:navController animated:TRUE completion:nil];
+}
+
+- (void) showInfo
+{
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:INFO_URL];
+    [webViewController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [webViewController.navigationBar setTranslucent:FALSE];
+    [webViewController setBarsTintColor:[UIColor whiteColor]];
+    
+    [self presentViewController:webViewController animated:YES completion:NULL];
 }
 
 #pragma mark - Load Data

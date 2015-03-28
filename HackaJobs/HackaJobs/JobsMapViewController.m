@@ -8,6 +8,7 @@
 
 #import "JobsMapViewController.h"
 #import "JobDetailViewController.h"
+#import <SVWebViewController/SVWebViewController.h>
 
 @interface JobsMapViewController ()
 
@@ -22,8 +23,11 @@
     // Do any additional setup after loading the view from its nib.
     [self setTitle:NSLocalizedString(@"application.name", nil)];
     
-    UIBarButtonItem *closeMapButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(closeMap)];
+    UIBarButtonItem *closeMapButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(closeMap)];
     [self.navigationItem setRightBarButtonItem:closeMapButton];
+    
+    UIBarButtonItem *buttonShowInfo = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"info"] style:UIBarButtonItemStylePlain target:self action:@selector(showInfo)];
+    [self.navigationItem setLeftBarButtonItem:buttonShowInfo];
     
     [_mapView setDelegate:self];
     
@@ -38,6 +42,16 @@
 - (void) closeMap
 {
     [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
+- (void) showInfo
+{
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:INFO_URL];
+    [webViewController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [webViewController.navigationBar setTranslucent:FALSE];
+    [webViewController setBarsTintColor:[UIColor whiteColor]];
+    
+    [self presentViewController:webViewController animated:YES completion:NULL];
 }
 
 #pragma mark - Load Map
