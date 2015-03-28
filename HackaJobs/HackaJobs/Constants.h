@@ -12,7 +12,7 @@
 //#define BASE_URL @"http://private-b9af1-hackathongi2015.apiary-mock.com"
 #define INFO_URL @"https://wallyjobs.com"
 #define BASE_URL @"https://api.wallyjobs.com"
-#define JOB_PAGE_URL @"/jobs/"
+#define JOB_PAGE_URL @"https://landing.wallyjobs.com"
 #define JOBS_URL @"/jobs"
 
 #endif

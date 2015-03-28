@@ -12,6 +12,11 @@
 - (void)awakeFromNib {
     // Initialization code
     
+    [_titleLabel setFont:[FontManager titleFont]];
+    [_descriptionLabel setFont:[FontManager defaultFont]];
+    [_cityLabel setFont:[FontManager defaultFont]];
+    [_endDateLabel setFont:[FontManager defaultFont]];
+    
     [_jobImage.layer setCornerRadius:40.0f];
     [_jobImage.layer setMasksToBounds:NO];
     [_jobImage setClipsToBounds:TRUE];

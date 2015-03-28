@@ -46,6 +46,13 @@
     
     self.webViewController.title = self.title;
     self.navigationBar.tintColor = self.barsTintColor;
+    [self.navigationController.tabBarController.tabBar setTranslucent:NO];
+    [self.navigationController.tabBarController.tabBar setBackgroundImage:[[UIImage alloc] init]];
+    [self.navigationController.tabBarController.tabBar setTintColor:[UIColor redColor]];
+    self.tabBarController.tabBar.tintColor = [[UIColor alloc] initWithRed:0.00
+                                                                    green:0.62
+                                                                     blue:0.93
+                                                                    alpha:1.0];
 }
 
 @end

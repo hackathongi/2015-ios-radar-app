@@ -27,6 +27,11 @@
 		438B11D91AC6FD6400EC2D1E /* JobsMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438B11D71AC6FD6400EC2D1E /* JobsMapView.xib */; };
 		438B11DB1AC6FF9C00EC2D1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438B11DA1AC6FF9C00EC2D1E /* MapKit.framework */; };
 		438B11E11AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11E01AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.m */; };
+		438B11E41AC7253E00EC2D1E /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11E31AC7253E00EC2D1E /* Owner.m */; };
+		438B11E71AC7298A00EC2D1E /* LucidaGrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 438B11E61AC7298A00EC2D1E /* LucidaGrande.ttf */; };
+		438B11EA1AC72A0300EC2D1E /* FontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11E91AC72A0300EC2D1E /* FontManager.m */; };
+		438B11EE1AC731E700EC2D1E /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438B11ED1AC731E700EC2D1E /* Launch.xib */; };
+		438B11F01AC7347800EC2D1E /* wallyJobsLogoOut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 438B11EF1AC7347800EC2D1E /* wallyJobsLogoOut.jpg */; };
 		5BDE6D31198917CB598AFA39 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEFEE63834A44D6C15C258A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,13 @@
 		438B11DA1AC6FF9C00EC2D1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		438B11DF1AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+NSURLRequestWithIgnoreSSL.h"; sourceTree = "<group>"; };
 		438B11E01AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+NSURLRequestWithIgnoreSSL.m"; sourceTree = "<group>"; };
+		438B11E21AC7253E00EC2D1E /* Owner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owner.h; sourceTree = "<group>"; };
+		438B11E31AC7253E00EC2D1E /* Owner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owner.m; sourceTree = "<group>"; };
+		438B11E61AC7298A00EC2D1E /* LucidaGrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttf; sourceTree = "<group>"; };
+		438B11E81AC72A0300EC2D1E /* FontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontManager.h; sourceTree = "<group>"; };
+		438B11E91AC72A0300EC2D1E /* FontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontManager.m; sourceTree = "<group>"; };
+		438B11ED1AC731E700EC2D1E /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Launch.xib; path = ../Launch.xib; sourceTree = "<group>"; };
+		438B11EF1AC7347800EC2D1E /* wallyJobsLogoOut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wallyJobsLogoOut.jpg; path = Images.xcassets/wallyJobsLogo.imageset/wallyJobsLogoOut.jpg; sourceTree = "<group>"; };
 		43C31B33C9B207988EA94A73 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9DEFEE63834A44D6C15C258A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02286EC98BE144E14F84799 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,12 +126,15 @@
 				437A8FC11AC69429001D170D /* ViewControllers */,
 				437A8FC71AC6A31D001D170D /* UITableViewCells */,
 				437A8FCF1AC6A819001D170D /* Helpers */,
+				438B11E51AC7297E00EC2D1E /* Fonts */,
 				437A8F9B1AC68FBD001D170D /* AppDelegate.h */,
 				437A8F9C1AC68FBD001D170D /* AppDelegate.m */,
 				437A8FA41AC68FBD001D170D /* Images.xcassets */,
+				438B11EF1AC7347800EC2D1E /* wallyJobsLogoOut.jpg */,
 				437A8F971AC68FBD001D170D /* Supporting Files */,
 				437A8FD81AC6AE6C001D170D /* Localizable.strings */,
 				437A8FDC1AC6BA38001D170D /* Constants.h */,
+				438B11ED1AC731E700EC2D1E /* Launch.xib */,
 			);
 			path = HackaJobs;
 			sourceTree = "<group>";
@@ -155,6 +170,8 @@
 				438B11C91AC6BF5800EC2D1E /* Lists */,
 				438B11C31AC6BED700EC2D1E /* Job.h */,
 				438B11C41AC6BED700EC2D1E /* Job.m */,
+				438B11E21AC7253E00EC2D1E /* Owner.h */,
+				438B11E31AC7253E00EC2D1E /* Owner.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -224,6 +241,16 @@
 				438B11C71AC6BF3D00EC2D1E /* JobsList.m */,
 			);
 			name = Lists;
+			sourceTree = "<group>";
+		};
+		438B11E51AC7297E00EC2D1E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				438B11E61AC7298A00EC2D1E /* LucidaGrande.ttf */,
+				438B11E81AC72A0300EC2D1E /* FontManager.h */,
+				438B11E91AC72A0300EC2D1E /* FontManager.m */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		D22F2629014229332F854DD7 /* Pods */ = {
@@ -314,8 +341,11 @@
 				437A8FA51AC68FBD001D170D /* Images.xcassets in Resources */,
 				438B11D11AC6CF8A00EC2D1E /* JobDetailView.xib in Resources */,
 				437A8FC61AC69452001D170D /* JobsListView.xib in Resources */,
+				438B11E71AC7298A00EC2D1E /* LucidaGrande.ttf in Resources */,
 				437A8FCE1AC6A3B3001D170D /* JobTableViewCell.xib in Resources */,
+				438B11EE1AC731E700EC2D1E /* Launch.xib in Resources */,
 				438B11D91AC6FD6400EC2D1E /* JobsMapView.xib in Resources */,
+				438B11F01AC7347800EC2D1E /* wallyJobsLogoOut.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +400,8 @@
 				437A8FD21AC6A82F001D170D /* FormatterManager.m in Sources */,
 				438B11D01AC6CF8A00EC2D1E /* JobDetailViewController.m in Sources */,
 				437A8FCD1AC6A3B3001D170D /* JobTableViewCell.m in Sources */,
+				438B11EA1AC72A0300EC2D1E /* FontManager.m in Sources */,
+				438B11E41AC7253E00EC2D1E /* Owner.m in Sources */,
 				438B11C21AC6BCD500EC2D1E /* OnlineDataConnector.m in Sources */,
 				438B11CC1AC6C2CA00EC2D1E /* NSDictionary+Utility.m in Sources */,
 			);

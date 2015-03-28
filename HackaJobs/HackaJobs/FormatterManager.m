@@ -42,7 +42,7 @@ static id sharedInstance;
     if (!_apiDateFormatter)
     {
         _apiDateFormatter = [[NSDateFormatter alloc] init];
-        [_apiDateFormatter setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
+        [_apiDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
         [_apiDateFormatter setCalendar:[NSCalendar currentCalendar]];
         [_apiDateFormatter setLocale:[NSLocale currentLocale]];
     }

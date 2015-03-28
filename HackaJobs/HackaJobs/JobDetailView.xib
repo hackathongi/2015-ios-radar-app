@@ -13,6 +13,7 @@
                 <outlet property="dateLabel" destination="Hl9-ns-XMR" id="aE9-6M-c05"/>
                 <outlet property="descriptionLabel" destination="7h6-AA-f0J" id="uVw-0Q-jdW"/>
                 <outlet property="imageView" destination="ybH-Qc-QrU" id="VOD-pc-hMb"/>
+                <outlet property="ownerLabel" destination="OTH-lQ-7RC" id="jJg-Po-2d9"/>
                 <outlet property="scrollView" destination="7fa-C3-OmL" id="5yF-vF-VSt"/>
                 <outlet property="titleLabel" destination="DrP-X8-WDb" id="Hcl-X7-AZ8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,16 +31,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-X8-WDb">
-                                    <rect key="frame" x="108" y="34" width="197" height="21"/>
+                                    <rect key="frame" x="108" y="28" width="197" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="yYn-61-eim"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Girona City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phg-7K-4SG">
-                                    <rect key="frame" x="108" y="63" width="122" height="21"/>
+                                    <rect key="frame" x="108" y="71" width="122" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="GYW-Vw-dgK"/>
                                     </constraints>
@@ -48,7 +49,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88/88/888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hl9-ns-XMR">
-                                    <rect key="frame" x="238" y="63" width="67" height="21"/>
+                                    <rect key="frame" x="238" y="71" width="67" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="Dw8-F2-iBH"/>
                                         <constraint firstAttribute="width" constant="67" id="jlm-dQ-m1K"/>
@@ -88,6 +89,15 @@
                                         <constraint firstAttribute="height" constant="80" id="t5q-z1-I2j"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTH-lQ-7RC">
+                                    <rect key="frame" x="108" y="49" width="197" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="NQa-rh-Sw9"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -98,14 +108,17 @@
                                 <constraint firstAttribute="trailing" secondItem="7h6-AA-f0J" secondAttribute="trailing" constant="15" id="Myj-9k-57L"/>
                                 <constraint firstAttribute="height" priority="400" constant="215" id="QC5-sD-33B"/>
                                 <constraint firstAttribute="trailing" secondItem="DrP-X8-WDb" secondAttribute="trailing" constant="15" id="Qkz-59-1lL"/>
-                                <constraint firstItem="phg-7K-4SG" firstAttribute="top" secondItem="DrP-X8-WDb" secondAttribute="bottom" constant="8" id="Re1-ue-TTE"/>
-                                <constraint firstItem="Hl9-ns-XMR" firstAttribute="top" secondItem="DrP-X8-WDb" secondAttribute="bottom" constant="8" id="Ri2-7j-jvN"/>
-                                <constraint firstItem="DrP-X8-WDb" firstAttribute="top" secondItem="wFG-7J-Daz" secondAttribute="top" constant="34" id="XgO-fb-weC"/>
+                                <constraint firstItem="phg-7K-4SG" firstAttribute="top" secondItem="DrP-X8-WDb" secondAttribute="bottom" constant="22" id="Re1-ue-TTE"/>
+                                <constraint firstItem="Hl9-ns-XMR" firstAttribute="top" secondItem="DrP-X8-WDb" secondAttribute="bottom" constant="22" id="Ri2-7j-jvN"/>
+                                <constraint firstItem="DrP-X8-WDb" firstAttribute="top" secondItem="wFG-7J-Daz" secondAttribute="top" constant="28" id="XgO-fb-weC"/>
                                 <constraint firstItem="7h6-AA-f0J" firstAttribute="top" secondItem="ybH-Qc-QrU" secondAttribute="bottom" constant="14" id="ZrB-Sw-Fvz"/>
+                                <constraint firstItem="OTH-lQ-7RC" firstAttribute="top" secondItem="DrP-X8-WDb" secondAttribute="bottom" id="aSN-GK-rCU"/>
                                 <constraint firstItem="7h6-AA-f0J" firstAttribute="leading" secondItem="wFG-7J-Daz" secondAttribute="leading" constant="15" id="b5v-yZ-zIP"/>
                                 <constraint firstItem="qTr-Hl-tlJ" firstAttribute="top" secondItem="7h6-AA-f0J" secondAttribute="bottom" constant="20" id="dhw-cX-jAv"/>
                                 <constraint firstItem="ybH-Qc-QrU" firstAttribute="top" secondItem="wFG-7J-Daz" secondAttribute="top" constant="20" id="eJ1-uR-14a"/>
+                                <constraint firstItem="OTH-lQ-7RC" firstAttribute="leading" secondItem="ybH-Qc-QrU" secondAttribute="trailing" constant="8" id="frk-nr-ssG"/>
                                 <constraint firstItem="DrP-X8-WDb" firstAttribute="leading" secondItem="ybH-Qc-QrU" secondAttribute="trailing" constant="8" id="rkU-ux-dmP"/>
+                                <constraint firstAttribute="trailing" secondItem="OTH-lQ-7RC" secondAttribute="trailing" constant="15" id="tV7-SZ-tEi"/>
                                 <constraint firstAttribute="trailing" secondItem="Hl9-ns-XMR" secondAttribute="trailing" constant="15" id="wcJ-Aq-MKd"/>
                                 <constraint firstAttribute="bottom" secondItem="qTr-Hl-tlJ" secondAttribute="bottom" constant="20" id="yyQ-s5-ygE"/>
                             </constraints>
