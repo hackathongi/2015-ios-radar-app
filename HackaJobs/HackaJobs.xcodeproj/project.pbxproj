@@ -23,6 +23,9 @@
 		438B11CC1AC6C2CA00EC2D1E /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11CB1AC6C2CA00EC2D1E /* NSDictionary+Utility.m */; };
 		438B11D01AC6CF8A00EC2D1E /* JobDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11CE1AC6CF8A00EC2D1E /* JobDetailViewController.m */; };
 		438B11D11AC6CF8A00EC2D1E /* JobDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438B11CF1AC6CF8A00EC2D1E /* JobDetailView.xib */; };
+		438B11D81AC6FD6400EC2D1E /* JobsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11D61AC6FD6400EC2D1E /* JobsMapViewController.m */; };
+		438B11D91AC6FD6400EC2D1E /* JobsMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438B11D71AC6FD6400EC2D1E /* JobsMapView.xib */; };
+		438B11DB1AC6FF9C00EC2D1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438B11DA1AC6FF9C00EC2D1E /* MapKit.framework */; };
 		5BDE6D31198917CB598AFA39 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEFEE63834A44D6C15C258A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,10 @@
 		438B11CD1AC6CF8A00EC2D1E /* JobDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobDetailViewController.h; sourceTree = "<group>"; };
 		438B11CE1AC6CF8A00EC2D1E /* JobDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobDetailViewController.m; sourceTree = "<group>"; };
 		438B11CF1AC6CF8A00EC2D1E /* JobDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobDetailView.xib; sourceTree = "<group>"; };
+		438B11D51AC6FD6400EC2D1E /* JobsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsMapViewController.h; sourceTree = "<group>"; };
+		438B11D61AC6FD6400EC2D1E /* JobsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsMapViewController.m; sourceTree = "<group>"; };
+		438B11D71AC6FD6400EC2D1E /* JobsMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobsMapView.xib; sourceTree = "<group>"; };
+		438B11DA1AC6FF9C00EC2D1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		43C31B33C9B207988EA94A73 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9DEFEE63834A44D6C15C258A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02286EC98BE144E14F84799 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438B11DB1AC6FF9C00EC2D1E /* MapKit.framework in Frameworks */,
 				5BDE6D31198917CB598AFA39 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +159,7 @@
 			children = (
 				437A8FC41AC69452001D170D /* JobsListView.xib */,
 				438B11CF1AC6CF8A00EC2D1E /* JobDetailView.xib */,
+				438B11D71AC6FD6400EC2D1E /* JobsMapView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -162,6 +171,8 @@
 				437A8FC31AC69452001D170D /* JobsListViewController.m */,
 				438B11CD1AC6CF8A00EC2D1E /* JobDetailViewController.h */,
 				438B11CE1AC6CF8A00EC2D1E /* JobDetailViewController.m */,
+				438B11D51AC6FD6400EC2D1E /* JobsMapViewController.h */,
+				438B11D61AC6FD6400EC2D1E /* JobsMapViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 		EE0B16A8CCA480EB39AB4E60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				438B11DA1AC6FF9C00EC2D1E /* MapKit.framework */,
 				9DEFEE63834A44D6C15C258A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -260,6 +272,11 @@
 				TargetAttributes = {
 					437A8F931AC68FBD001D170D = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -293,6 +310,7 @@
 				438B11D11AC6CF8A00EC2D1E /* JobDetailView.xib in Resources */,
 				437A8FC61AC69452001D170D /* JobsListView.xib in Resources */,
 				437A8FCE1AC6A3B3001D170D /* JobTableViewCell.xib in Resources */,
+				438B11D91AC6FD6400EC2D1E /* JobsMapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				438B11C81AC6BF3D00EC2D1E /* JobsList.m in Sources */,
+				438B11D81AC6FD6400EC2D1E /* JobsMapViewController.m in Sources */,
 				437A8F9D1AC68FBD001D170D /* AppDelegate.m in Sources */,
 				437A8FC51AC69452001D170D /* JobsListViewController.m in Sources */,
 				438B11BF1AC6BBF700EC2D1E /* SuperViewController.m in Sources */,

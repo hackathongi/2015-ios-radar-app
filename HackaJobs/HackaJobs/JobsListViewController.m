@@ -10,6 +10,7 @@
 #import "JobTableViewCell.h"
 #import "JobDetailViewController.h"
 #import "OnlineDataConnector.h"
+#import "JobsMapViewController.h"
 
 @interface JobsListViewController ()
 
@@ -32,6 +33,9 @@
     [_tableView registerNib:[UINib nibWithNibName:@"JobTableViewCell" bundle:nil] forCellReuseIdentifier:[JobTableViewCell cellIdentifier]];
     [_tableView setRowHeight:[JobTableViewCell getRowHeight]];
     
+    UIBarButtonItem *buttonShowMap = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showMap)];
+    [self.navigationItem setRightBarButtonItem:buttonShowMap];
+    
     [self loadData:TRUE];
 }
 
@@ -39,6 +43,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Show Map
+- (void) showMap
+{
+    JobsMapViewController *jobsMapVC = [[JobsMapViewController alloc] initWithNibName:@"JobsMapView" bundle:nil];
+    [jobsMapVC setJobsList:jobs];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:jobsMapVC];
+    [navController.navigationBar setTranslucent:FALSE];
+    
+    navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    [self presentViewController:navController animated:TRUE completion:nil];
 }
 
 #pragma mark - Load Data
