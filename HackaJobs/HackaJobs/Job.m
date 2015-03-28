@@ -28,9 +28,9 @@
             self.ident = [[dictionary objectForKeyNotNull:@"id"] integerValue];
         }
         
-        if ([dictionary objectForKeyNotNull:@"owner_id"])
+        if ([dictionary objectForKeyNotNull:@"owner"])
         {
-            self.ownerId = [[dictionary objectForKeyNotNull:@"owner_id"] integerValue];
+            self.owner = [[Owner alloc] initWithDictionary:[dictionary objectForKeyNotNull:@"owner"]];
         }
         
         if ([dictionary objectForKeyNotNull:@"latitude"])

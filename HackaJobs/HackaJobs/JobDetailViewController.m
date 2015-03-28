@@ -53,6 +53,7 @@
 {
     [_titleLabel setText:_selectedJob.title];
     [_cityLabel setText:_selectedJob.city];
+    [_ownerLabel setText:_selectedJob.owner.name];
     [_descriptionLabel setText:_selectedJob.desc];
     [_dateLabel setText:[[[FormatterManager sharedInstance] shortDateNoTimeDateFormatter] stringFromDate:_selectedJob.endDate]];
     [_imageView setImageWithURL:_selectedJob.pictureURL];

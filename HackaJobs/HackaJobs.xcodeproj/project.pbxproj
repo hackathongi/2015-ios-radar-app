@@ -27,6 +27,7 @@
 		438B11D91AC6FD6400EC2D1E /* JobsMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438B11D71AC6FD6400EC2D1E /* JobsMapView.xib */; };
 		438B11DB1AC6FF9C00EC2D1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438B11DA1AC6FF9C00EC2D1E /* MapKit.framework */; };
 		438B11E11AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11E01AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.m */; };
+		438B11E41AC7253E00EC2D1E /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B11E31AC7253E00EC2D1E /* Owner.m */; };
 		5BDE6D31198917CB598AFA39 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEFEE63834A44D6C15C258A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		438B11DA1AC6FF9C00EC2D1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		438B11DF1AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+NSURLRequestWithIgnoreSSL.h"; sourceTree = "<group>"; };
 		438B11E01AC71D5700EC2D1E /* NSURLRequest+NSURLRequestWithIgnoreSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+NSURLRequestWithIgnoreSSL.m"; sourceTree = "<group>"; };
+		438B11E21AC7253E00EC2D1E /* Owner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owner.h; sourceTree = "<group>"; };
+		438B11E31AC7253E00EC2D1E /* Owner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owner.m; sourceTree = "<group>"; };
 		43C31B33C9B207988EA94A73 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9DEFEE63834A44D6C15C258A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02286EC98BE144E14F84799 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				438B11C91AC6BF5800EC2D1E /* Lists */,
 				438B11C31AC6BED700EC2D1E /* Job.h */,
 				438B11C41AC6BED700EC2D1E /* Job.m */,
+				438B11E21AC7253E00EC2D1E /* Owner.h */,
+				438B11E31AC7253E00EC2D1E /* Owner.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				437A8FD21AC6A82F001D170D /* FormatterManager.m in Sources */,
 				438B11D01AC6CF8A00EC2D1E /* JobDetailViewController.m in Sources */,
 				437A8FCD1AC6A3B3001D170D /* JobTableViewCell.m in Sources */,
+				438B11E41AC7253E00EC2D1E /* Owner.m in Sources */,
 				438B11C21AC6BCD500EC2D1E /* OnlineDataConnector.m in Sources */,
 				438B11CC1AC6C2CA00EC2D1E /* NSDictionary+Utility.m in Sources */,
 			);

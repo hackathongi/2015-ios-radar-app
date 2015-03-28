@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Owner.h"
 
 @interface Job : NSObject
 
 @property (nonatomic) NSInteger ident;
-@property (nonatomic) NSInteger ownerId;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *desc;
 @property (nonatomic, strong) NSDate *startDate;
@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSURL *jobURL;
 @property (nonatomic) float latitude;
 @property (nonatomic) float longitude;
+@property (nonatomic, strong) Owner *owner;
 
 - (id) initWithDictionary:(NSDictionary*)dictionary;
 - (BOOL) hasLatLong;
