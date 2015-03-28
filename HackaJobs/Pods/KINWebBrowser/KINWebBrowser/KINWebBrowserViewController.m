@@ -176,7 +176,9 @@ static void *KINContext = &KINContext;
         [self.wkWebView loadRequest:[NSURLRequest requestWithURL:URL]];
     }
     else if(self.uiWebView) {
-        [self.uiWebView loadRequest:[NSURLRequest requestWithURL:URL]];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URL];
+        
+        [self.uiWebView loadRequest:request];
     }
 }
 

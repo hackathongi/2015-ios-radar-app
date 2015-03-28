@@ -24,5 +24,6 @@
 
 - (id) initWithDictionary:(NSDictionary*)dictionary;
 - (BOOL) hasLatLong;
+- (NSString*) applyURLString;
 
 @end
