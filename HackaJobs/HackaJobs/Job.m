@@ -66,10 +66,34 @@
         {
             self.jobURL = [NSURL URLWithString:[dictionary objectForKeyNotNull:@"job_url"]];
         }
+        
+        [self reloadLatLongIfNeeded];
     }
     
     return self;
 }
 
+- (BOOL) hasLatLong
+{
+    return _latitude != 0 && _longitude != 0;
+}
+
+- (void) reloadLatLongIfNeeded
+{
+    if (![self hasLatLong])
+    {
+        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+        [geocoder geocodeAddressString:[self city]
+                     completionHandler:^(NSArray* placemarks, NSError* error)
+         {
+             for (CLPlacemark* aPlacemark in placemarks)
+             {
+                 // Process the placemark.
+                 self.latitude = aPlacemark.location.coordinate.latitude;
+                 self.longitude = aPlacemark.location.coordinate.longitude;
+             }
+         }];
+    }
+}
 
 @end

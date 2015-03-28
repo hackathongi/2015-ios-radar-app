@@ -27,9 +27,9 @@
     [_navController.navigationBar setOpaque:TRUE];
 
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [_navController.navigationBar setTintColor:[UIColor whiteColor]];
-    [_navController.navigationBar setBarTintColor:[UIColor colorWithRed:217.0f/255.0f green:35.0f/255.0f blue:22.0f/255.0f alpha:1.0f]];
-    [_navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:217.0f/255.0f green:35.0f/255.0f blue:22.0f/255.0f alpha:1.0f]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:_navController];

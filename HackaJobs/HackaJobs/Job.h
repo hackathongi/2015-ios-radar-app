@@ -23,5 +23,6 @@
 @property (nonatomic) float longitude;
 
 - (id) initWithDictionary:(NSDictionary*)dictionary;
+- (BOOL) hasLatLong;
 
 @end
